@@ -1148,6 +1148,7 @@ var switchData = function(num1, num2) {
 var stop = function() {
   ///This function clean data
   clearInterval(intId);
+  process.exit(0);
 };
 
 var shutdown = function() {
@@ -1178,5 +1179,3 @@ client.on('close', function() {
   fs.appendFileSync("error.log", "ID 2: " + Date.now() + ": " + 'Client closed, stopping interval.' + "\n");
   stop();
 });
-
-}
